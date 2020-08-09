@@ -1,125 +1,156 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background: linear-gradient(120deg, #f6d365, #d88771);
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+body {
+  background: linear-gradient(120deg, #f6d365, #d88771);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
 }
-header{
-    font-size: 1.5rem;
+header {
+  font-size: 1.5rem;
 }
-a{
-    color: #fff;
-    margin-left: 20px;
-    font-size: 50px;
+a {
+  color: #fff;
+  margin-left: 20px;
+  font-size: 50px;
 }
 header,
-form{
-    min-height: 20vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 form input,
-form button{
+form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  background: #ffffff;
+  border-radius: 5px;
+}
+form button {
+  color: #d88771;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #d88771;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  form input,
+  form button {
     padding: 0.5rem;
     font-size: 2rem;
     border: none;
     background: #ffffff;
     border-radius: 5px;
-}
-form button{
-    color: #d88771;
-    background: #fff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-form button:hover{
-    background: #d88771;
-    color: #fff;
+  }
 }
 /* Todo List Style */
-.todo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.todo-list{
-    min-width: 30%;
-    list-style: none;
+.todo-list {
+  min-width: 30%;
+  list-style: none;
 }
-.todo{
-    margin: 0.5rem;
-    background: #fff;
-    color: #000;
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.5s ease;
+.todo {
+  margin: 0.5rem;
+  background: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.5s ease;
 }
-.todo li{
-    flex: 1;
+.todo li {
+  flex: 1;
 }
-.complete-btn, .trash-btn{
-    background-color: #ff6f47;
-    color: #fff;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+.complete-btn,
+.trash-btn {
+  background-color: #ff6f47;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: .8rem;
 }
-.complete-btn{
+.complete-btn {
     background-color: rgb(73, 204, 73);
+  }
+
+@media (min-width: 768px) {
+  .complete-btn,
+  .trash-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 }
-.todo-item{
-    padding: 0 .5rem;
+.todo-item {
+  padding: 0 0.5rem;
 }
 .fa-trash,
-.fa-check{
-    pointer-events: none;
+.fa-check {
+  pointer-events: none;
 }
-.completed{
-    text-decoration: line-through;
-    opacity: 0.5;
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
 }
-.fall{
-    transform: translateY(8rem) rotateZ(20deg);
-    opacity: 0;
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
 }
-select{
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    outline: none;
-    border: none;
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
 }
-.select{
-    margin: 1rem;
-    position: relative;
-    overflow: hidden;
+.select {
+  margin: .5rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
 }
-select{
-    color: #ff6f47;
-    width: 10rem;
-    cursor: pointer;
-    padding: 1rem;
+@media (min-width: 768px) {
+    .select {
+        margin: 1rem;
+    }
 }
-.select::after{
-    content: "\25BC";
-    position: absolute;
-    background-color: #d88771;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    pointer-events: none;
-    transition: all 0.5s ease;
+select {
+  color: #ff6f47;
+  width: 6rem;
+  cursor: pointer;
+  padding: .8rem;
 }
-.select:hover::after{
-    background-color: #fff;
-    color: #d88771;
+@media (min-width: 768px) {
+    select {
+        width: 10rem;
+        padding: 1.2rem;
+    }
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background-color: #d88771;
+  top: 0;
+  right: 0;
+  padding: .8rem;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.select:hover::after {
+  background-color: #fff;
+  color: #d88771;
 }
