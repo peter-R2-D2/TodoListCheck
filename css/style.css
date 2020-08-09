@@ -17,9 +17,6 @@ a{
     margin-left: 20px;
     font-size: 50px;
 }
-a:hover{
-    color: black;
-}
 header,
 form{
     min-height: 20vh;
